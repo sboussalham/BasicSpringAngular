@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { UserService } from '../providers/user.service';
+import { User } from '../modals/user';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +10,13 @@ import { UserService } from '../user.service';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'AngularLearnProject';
+  title = 'Crud user operations';
   entred = '';
   displayed = true;
   choice = 'A';
 
-  users: any;
+  // users: any;
+  users: Observable<User[]>;
 
   onClick() {
     console.log('Welcome there');
@@ -29,6 +32,7 @@ export class HomeComponent implements OnInit {
 
   getUsers() {
     this.userService.getUsers().subscribe(data => this.users = data);
+    // this.users = this.userService.getUsers();
   }
 
 }
