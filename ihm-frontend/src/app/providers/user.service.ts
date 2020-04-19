@@ -34,9 +34,9 @@ export class UserService {
     return this.http.post(this.baseUrl + '/createUser', user, {headers});
   }
 
-  updateUser(id: number, value: any): Observable<Object> {
+  /* updateUser(id: number, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
-  }
+  } */
 
   deleteUser(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });

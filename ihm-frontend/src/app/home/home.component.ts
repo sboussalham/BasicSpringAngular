@@ -15,24 +15,15 @@ export class HomeComponent implements OnInit {
   displayed = true;
   choice = 'A';
 
-  // users: any;
-  users: Observable<User[]>;
-
   onClick() {
     console.log('Welcome there');
     this.entred = 'Helloooo';
     this.displayed = !this.displayed;
   }
 
-  constructor(private userService: UserService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getUsers();
-  }
-
-  getUsers() {
-    this.userService.getUsers().subscribe(data => this.users = data);
-    // this.users = this.userService.getUsers();
   }
 
 }

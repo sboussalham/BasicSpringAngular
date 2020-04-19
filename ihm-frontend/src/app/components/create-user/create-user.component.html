@@ -1,5 +1,7 @@
+<div class="container mt-3">
 <h3>Create User</h3>
-<div [hidden]="submitted" style="width: 400px;">
+<!-- <div [hidden]="submitted" style="width: 400px;"> -->
+<div style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
@@ -23,4 +25,5 @@
 <div [hidden]="!submitted">
   <h4>You submitted successfully!</h4>
   <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
 </div>
