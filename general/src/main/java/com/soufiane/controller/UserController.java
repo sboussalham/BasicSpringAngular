@@ -27,9 +27,9 @@ public class UserController {
         return users;
     }
 
-    @PostMapping("/addUser")
+    @PostMapping("/createUser")
     @ResponseStatus(HttpStatus.CREATED)
-    public String addUser(@RequestBody User user){
+    public String createUser(@RequestBody User user){
         users.add(user);
         return "User added";
     }
